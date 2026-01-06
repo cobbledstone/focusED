@@ -46,33 +46,33 @@
   },
   {
     "id": "medium_4",
-    "subject": "math",
-    "topic": "algebra",
+    "subject": "cs",
+    "topic": "loops", 
     "difficulty": "medium",
-    "question": "Solve for x: 3x - 7 = 2x + 5",
+    "question": "Which of the following statement is correct for switch controlling expression?",
     "options": [
-      "x = 12",
-      "x = 2",
-      "x = -12",
-      "x = -2"
+      "Only int can be used in “switch” control expression.",
+      "Both int and char can be used in “switch” control expression.",
+      "All types i.e. int, char and float can be used in “switch” control expression.",
+      "“switch” control expression can be empty as well."
     ],
-    "correctAnswer": 0,
-    "explanation": "3x - 7 = 2x + 5 → 3x - 2x = 5 + 7 → x = 12"
+    "correctAnswer": 1,
+    "explanation": "As per C standard, “The controlling expression of a switch statement shall have integer type.” Since char is prompted to integer in switch control expression, it’s allowed but float isn’t promoted. That’s why B is correct statement."
   },
   {
     "id": "medium_5",
-    "subject": "math",
-    "topic": "geometry",
+    "subject": "cs",
+    "topic": "loops",
     "difficulty": "medium",
-    "question": "What is the area of a circle with radius 5?",
+    "question": "Which for loop has range of similar indexes of ‘i’ used in for (i = 0;i < n; i++)?",
     "options": [
-      "25π",
-      "10π",
-      "5π",
-      "50π"
+      "for (i = n; i>0; i–)",
+      "for (i = n; i >= 0; i–)",
+      "for (i = n-1; i>0; i–)",
+      "for (i = n-1; i>-1; i–)"
     ],
-    "correctAnswer": 0,
-    "explanation": "Area = πr² = π(5)² = 25π"
+    "correctAnswer": 3,
+    "explanation": "The given loop iterates from the index 0th to n-1th, and the for(i = n-1; i> -1; i–) iterate from index n-1th to 0th, which are the same indexes but in reverse order."
   }
 ]
 

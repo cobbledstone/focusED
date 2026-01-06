@@ -1,0 +1,65 @@
+{
+  "student_001": {
+    "id": "student_001",
+    "name": "John Doe",
+    "email": "john.doe@student.edu",
+    "overallMastery": 65,
+    "engagementIndex": "High",
+    "subjects": {
+      "math": {
+        "mastery": 65,
+        "quizzesCompleted": 12,
+        "averageScore": 68,
+        "assignmentsCompleted": 8,
+        "assignmentsPending": 2,
+        "trend": "improving",
+        "topics": [
+          { "name": "Sound", "mastery": 70, "lastScore": 75 },
+          { "name": "Geometry", "mastery": 60, "lastScore": 65 },
+          { "name": "Calculus", "mastery": 65, "lastScore": 70 }
+        ]
+      },
+      "physics": {
+        "mastery": 88,
+        "quizzesCompleted": 15,
+        "averageScore": 85,
+        "assignmentsCompleted": 10,
+        "assignmentsPending": 0,
+        "trend": "stable",
+        "topics": [
+          { "name": "Mechanics", "mastery": 90, "lastScore": 92 },
+          { "name": "Thermodynamics", "mastery": 85, "lastScore": 88 },
+          { "name": "Optics", "mastery": 89, "lastScore": 90 }
+        ]
+      },
+      "cs": {
+        "mastery": 42,
+        "quizzesCompleted": 8,
+        "averageScore": 45,
+        "assignmentsCompleted": 5,
+        "assignmentsPending": 5,
+        "trend": "declining",
+        "topics": [
+          { "name": "Microprocessors", "mastery": 50, "lastScore": 55 },
+          { "name": "While Loops", "mastery": 35, "lastScore": 42 },
+          { "name": "Data Structures", "mastery": 40, "lastScore": 40 }
+        ]
+      }
+    },
+    "recentActivity": [
+      { "date": "2024-01-15", "activity": "Completed Microprocessors Quiz", "score": 55 },
+      { "date": "2024-01-14", "activity": "Started While Loops practice", "score": null },
+      { "date": "2024-01-13", "activity": "Completed Sound Assignment", "score": null }
+    ],
+    "participationData": [
+      { "date": "2024-01-09", "quizzes": 2, "time": 45 },
+      { "date": "2024-01-10", "quizzes": 3, "time": 60 },
+      { "date": "2024-01-11", "quizzes": 1, "time": 30 },
+      { "date": "2024-01-12", "quizzes": 4, "time": 75 },
+      { "date": "2024-01-13", "quizzes": 2, "time": 50 },
+      { "date": "2024-01-14", "quizzes": 3, "time": 65 },
+      { "date": "2024-01-15", "quizzes": 5, "time": 90 }
+    ]
+  }
+}
+

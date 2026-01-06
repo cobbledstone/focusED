@@ -5,10 +5,20 @@ import studentData from '../data/student.json'
 import subjectsData from '../data/subjects.json'
 import participationData from '../data/participation.json'
 
-function Dashboard() {
+function Dashboard({ onLogout }) {
   const navigate = useNavigate()
   const [student, setStudent] = useState(studentData)
   const [subjects, setSubjects] = useState(subjectsData)
+
+  const handleLogout = () => {
+    if (onLogout) {
+      onLogout()
+    } else {
+      localStorage.removeItem('isLoggedIn')
+      localStorage.removeItem('userRole')
+      navigate('/login')
+    }
+  }
 
   // Find priority topic (lowest mastery or flagged as priority)
   const getPriorityRecommendation = () => {
@@ -62,9 +72,9 @@ function Dashboard() {
         <div className="p-6">
           <div className="flex items-center gap-3 mb-8">
             <div className="w-10 h-10 bg-purple-600 rounded-lg flex items-center justify-center">
-              <span className="text-2xl font-bold">A</span>
+              <span className="text-2xl font-bold">F</span>
             </div>
-            <span className="text-xl font-bold">FocusED</span>
+            <span className="text-xl font-bold">focusED</span>
           </div>
           
           <nav className="space-y-2">
@@ -118,7 +128,7 @@ function Dashboard() {
             <div className="flex justify-between items-center">
               <div>
                 <h1 className="text-xl font-bold text-gray-900">Student Dashboard</h1>
-                <p className="text-sm text-gray-600">Class 10 - Science Stream</p>
+                <p className="text-sm text-gray-600">Class 12 - Science Stream</p>
               </div>
               <div className="flex items-center gap-4">
                 <button className="text-gray-600 hover:text-gray-900">
@@ -135,6 +145,12 @@ function Dashboard() {
                     {student.name.charAt(0)}
                   </div>
                 </div>
+                <button
+                  onClick={handleLogout}
+                  className="px-3 py-2 rounded-lg border border-gray-200 text-sm font-semibold text-gray-700 hover:bg-gray-50"
+                >
+                  Logout
+                </button>
               </div>
             </div>
           </div>

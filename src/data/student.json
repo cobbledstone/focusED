@@ -1,7 +1,7 @@
 {
   "id": "student_001",
-  "name": "Alex Johnson",
-  "email": "alex.johnson@student.edu",
+  "name": "John Doe",
+  "email": "john.doe@student.edu",
   "overallMastery": 65,
   "engagementIndex": "High",
   "coins": 1250,

@@ -1,0 +1,42 @@
+[
+  {
+    "id": "assign_001",
+    "title": "Algebra Fundamentals Quiz",
+    "classId": "class_10a",
+    "subject": "Mathematics",
+    "dueDate": "2024-01-20",
+    "assignedDate": "2024-01-15",
+    "status": "active",
+    "totalStudents": 32,
+    "submitted": 24,
+    "pending": 8,
+    "averageScore": 72
+  },
+  {
+    "id": "assign_002",
+    "title": "While Loops Practice",
+    "classId": "class_10c",
+    "subject": "Computer Science",
+    "dueDate": "2024-01-18",
+    "assignedDate": "2024-01-12",
+    "status": "active",
+    "totalStudents": 25,
+    "submitted": 15,
+    "pending": 10,
+    "averageScore": 58
+  },
+  {
+    "id": "assign_003",
+    "title": "Mechanics Problem Set",
+    "classId": "class_10b",
+    "subject": "Physics",
+    "dueDate": "2024-01-22",
+    "assignedDate": "2024-01-16",
+    "status": "active",
+    "totalStudents": 28,
+    "submitted": 5,
+    "pending": 23,
+    "averageScore": null
+  }
+]
+

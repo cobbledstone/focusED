@@ -1,0 +1,103 @@
+[
+  {
+    "id": "class_12a",
+    "name": "Class 12A - Science Stream",
+    "subject": "Mathematics",
+    "totalStudents": 32,
+    "averageMastery": 72,
+    "averageEngagement": "High",
+    "students": [
+      {
+        "id": "student_001",
+        "name": "John Doe",
+        "mastery": 65,
+        "engagement": "High",
+        "assignmentsCompleted": 8,
+        "assignmentsPending": 2,
+        "lastActive": "2024-01-15",
+        "trend": "improving"
+      },
+      {
+        "id": "student_002",
+        "name": "Jane Doe",
+        "mastery": 88,
+        "engagement": "High",
+        "assignmentsCompleted": 10,
+        "assignmentsPending": 0,
+        "lastActive": "2024-01-15",
+        "trend": "stable"
+      },
+      {
+        "id": "student_003",
+        "name": "Alex Ruiz",
+        "mastery": 45,
+        "engagement": "Medium",
+        "assignmentsCompleted": 6,
+        "assignmentsPending": 4,
+        "lastActive": "2024-01-14",
+        "trend": "declining"
+      },
+      {
+        "id": "student_004",
+        "name": "Sophia Benson",
+        "mastery": 78,
+        "engagement": "High",
+        "assignmentsCompleted": 9,
+        "assignmentsPending": 1,
+        "lastActive": "2024-01-15",
+        "trend": "improving"
+      },
+      {
+        "id": "student_005",
+        "name": "Edward Benson",
+        "mastery": 52,
+        "engagement": "Medium",
+        "assignmentsCompleted": 7,
+        "assignmentsPending": 3,
+        "lastActive": "2024-01-13",
+        "trend": "stable"
+      }
+    ]
+  },
+  {
+    "id": "class_12b",
+    "name": "Class 12B - Science Stream",
+    "subject": "Physics",
+    "totalStudents": 28,
+    "averageMastery": 68,
+    "averageEngagement": "Medium",
+    "students": [
+      {
+        "id": "student_006",
+        "name": "Catherine Hadith",
+        "mastery": 82,
+        "engagement": "High",
+        "assignmentsCompleted": 9,
+        "assignmentsPending": 1,
+        "lastActive": "2024-01-15",
+        "trend": "improving"
+      },
+      {
+        "id": "student_007",
+        "name": "Austin Thomas",
+        "mastery": 58,
+        "engagement": "Medium",
+        "assignmentsCompleted": 7,
+        "assignmentsPending": 3,
+        "lastActive": "2024-01-14",
+        "trend": "stable"
+      },
+      {
+        "id": "student_008",
+        "name": "John Stiglitz",
+        "mastery": 91,
+        "engagement": "High",
+        "assignmentsCompleted": 10,
+        "assignmentsPending": 0,
+        "lastActive": "2024-01-15",
+        "trend": "improving"
+      }
+    ]
+  }
+]
+

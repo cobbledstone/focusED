@@ -66,14 +66,14 @@
       {
         "id": "while_loops",
         "name": "While Loops",
-        "mastery": 42,
-        "lastScore": 42,
+        "mastery": 35,
+        "lastScore": 35,
         "priority": true
       },
       {
         "id": "data_structures",
         "name": "Data Structures",
-        "mastery": 35,
+        "mastery": 40,
         "lastScore": 40
       }
     ]

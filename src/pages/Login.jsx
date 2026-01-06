@@ -5,13 +5,19 @@ function Login({ onLogin }) {
   const navigate = useNavigate()
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
+  const [role, setRole] = useState('student') // 'student' or 'teacher'
 
   const handleSubmit = (e) => {
     e.preventDefault()
     // Dummy login - no actual authentication
     if (email && password) {
-      onLogin()
-      navigate('/dashboard')
+      onLogin(role)
+      // Navigate based on role
+      if (role === 'teacher') {
+        navigate('/teacher/dashboard')
+      } else {
+        navigate('/dashboard')
+      }
     }
   }
 
@@ -19,8 +25,39 @@ function Login({ onLogin }) {
     <div className="min-h-screen bg-gradient-to-br from-primary-500 via-primary-600 to-primary-700 flex items-center justify-center p-4">
       <div className="bg-white rounded-2xl shadow-2xl w-full max-w-md p-8">
         <div className="text-center mb-8">
-          <h1 className="text-4xl font-bold text-primary-700 mb-2">FocusED</h1>
+          <h1 className="text-4xl font-bold text-primary-700 mb-2">focusED</h1>
           <p className="text-gray-600">Adaptive Mastery Education Platform</p>
+        </div>
+
+        {/* Role Selection */}
+        <div className="mb-6">
+          <label className="block text-sm font-medium text-gray-700 mb-3">
+            Login as
+          </label>
+          <div className="grid grid-cols-2 gap-3">
+            <button
+              type="button"
+              onClick={() => setRole('student')}
+              className={`py-3 px-4 rounded-lg border-2 font-semibold transition ${
+                role === 'student'
+                  ? 'border-primary-600 bg-primary-50 text-primary-700'
+                  : 'border-gray-200 bg-white text-gray-700 hover:border-gray-300'
+              }`}
+            >
+              👨‍🎓 Student
+            </button>
+            <button
+              type="button"
+              onClick={() => setRole('teacher')}
+              className={`py-3 px-4 rounded-lg border-2 font-semibold transition ${
+                role === 'teacher'
+                  ? 'border-primary-600 bg-primary-50 text-primary-700'
+                  : 'border-gray-200 bg-white text-gray-700 hover:border-gray-300'
+              }`}
+            >
+              👨‍🏫 Teacher
+            </button>
+          </div>
         </div>
         
         <form onSubmit={handleSubmit} className="space-y-6">
@@ -33,7 +70,7 @@ function Login({ onLogin }) {
               type="email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
-              placeholder="student@example.com"
+              placeholder="name@example.com"
               className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent outline-none transition"
               required
             />
@@ -62,9 +99,6 @@ function Login({ onLogin }) {
           </button>
         </form>
         
-        <p className="mt-6 text-center text-sm text-gray-500">
-          Demo Mode: Enter any email and password to continue
-        </p>
       </div>
     </div>
   )
