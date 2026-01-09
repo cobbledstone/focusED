@@ -101,7 +101,7 @@ focused-adaptive-learning/
 ### Dashboard
 - Overall Mastery circular progress indicator
 - Engagement Index (High/Medium/Low)
-- Coins & Rewards display
+- Leaderboard & Points display
 - AI Recommendation card with priority topics
 - Subject Mastery section with progress bars
 - Participation trend chart

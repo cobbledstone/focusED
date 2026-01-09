@@ -1,0 +1,42 @@
+[
+  {
+    "id": "student_001",
+    "name": "John Doe",
+    "points": 1250
+  },
+  {
+    "id": "student_002",
+    "name": "Jane Doe",
+    "points": 2100
+  },
+  {
+    "id": "student_003",
+    "name": "Alex Ruiz",
+    "points": 850
+  },
+  {
+    "id": "student_004",
+    "name": "Sophia Benson",
+    "points": 1950
+  },
+  {
+    "id": "student_005",
+    "name": "Edward Benson",
+    "points": 1100
+  },
+  {
+    "id": "student_006",
+    "name": "Catherine Hadith",
+    "points": 1800
+  },
+  {
+    "id": "student_007",
+    "name": "Austin Thomas",
+    "points": 950
+  },
+  {
+    "id": "student_008",
+    "name": "John Stiglitz",
+    "points": 2400
+  }
+]

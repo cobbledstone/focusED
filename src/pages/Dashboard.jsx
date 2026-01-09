@@ -4,11 +4,20 @@ import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContai
 import studentData from '../data/student.json'
 import subjectsData from '../data/subjects.json'
 import participationData from '../data/participation.json'
+import leaderboardData from '../data/leaderboard.json'
 
 function Dashboard({ onLogout }) {
   const navigate = useNavigate()
   const [student, setStudent] = useState(studentData)
   const [subjects, setSubjects] = useState(subjectsData)
+  
+  // Sort leaderboard by points (descending) and add rank
+  const sortedLeaderboard = [...leaderboardData]
+    .sort((a, b) => b.points - a.points)
+    .map((student, index) => ({
+      ...student,
+      rank: index + 1
+    }))
 
   const handleLogout = () => {
     if (onLogout) {
@@ -211,20 +220,43 @@ function Dashboard({ onLogout }) {
                 </div>
               </div>
 
-              {/* My Coins */}
+              {/* Leaderboard */}
               <div className="bg-white rounded-xl shadow-sm p-6">
-                <h3 className="text-sm font-semibold text-gray-700 mb-4">My Coins</h3>
-                <div className="flex items-center gap-3 mb-4">
-                  <span className="text-3xl">🪙</span>
-                  <span className="text-2xl font-bold text-gray-900">{student.coins.toLocaleString()}</span>
+                <h3 className="text-sm font-semibold text-gray-700 mb-4">Leaderboard</h3>
+                <div className="space-y-2 max-h-64 overflow-y-auto">
+                  {sortedLeaderboard.slice(0, 5).map((entry) => (
+                    <div
+                      key={entry.id}
+                      className={`flex items-center justify-between p-2 rounded-lg ${
+                        entry.id === student.id ? 'bg-purple-50 border border-purple-200' : 'hover:bg-gray-50'
+                      }`}
+                    >
+                      <div className="flex items-center gap-3">
+                        <span className={`text-sm font-bold w-6 text-center ${
+                          entry.rank === 1 ? 'text-yellow-500' :
+                          entry.rank === 2 ? 'text-gray-400' :
+                          entry.rank === 3 ? 'text-orange-600' :
+                          'text-gray-600'
+                        }`}>
+                          #{entry.rank}
+                        </span>
+                        <span className={`text-sm font-medium ${
+                          entry.id === student.id ? 'text-purple-700 font-semibold' : 'text-gray-900'
+                        }`}>
+                          {entry.name}
+                        </span>
+                      </div>
+                      <span className="text-sm font-semibold text-gray-700">
+                        {entry.points.toLocaleString()} pts
+                      </span>
+                    </div>
+                  ))}
                 </div>
-                <button className="w-full bg-purple-600 text-white py-2 rounded-lg font-semibold hover:bg-purple-700 transition mb-2 flex items-center justify-center gap-2">
-                  <span>🎁</span>
-                  Redeem Rewards
-                </button>
-                <a href="#" className="text-xs text-gray-600 hover:text-gray-900 text-right block">
-                  History &gt;
-                </a>
+                {sortedLeaderboard.length > 5 && (
+                  <a href="#" className="text-xs text-gray-600 hover:text-gray-900 text-right block mt-3">
+                    View All &gt;
+                  </a>
+                )}
               </div>
             </div>
 
@@ -253,8 +285,8 @@ function Dashboard({ onLogout }) {
                         Medium Difficulty
                       </span>
                       <span className="flex items-center gap-1">
-                        <span>🪙</span>
-                        +50 Coins Potential
+                        <span>⭐</span>
+                        +50 Points Potential
                       </span>
                     </div>
                   </div>
@@ -345,7 +377,7 @@ function Dashboard({ onLogout }) {
                     <span className="bg-red-600 text-white text-xs font-semibold px-2 py-1 rounded">Live</span>
                   </div>
                   <p className="text-orange-100 mb-4">
-                    Challenge a peer on your weak topic and win coins!
+                    Challenge a peer on your weak topic and win points!
                   </p>
                   <div className="flex items-center gap-4 mb-4">
                     <div className="bg-white/20 rounded-lg p-4">
@@ -356,8 +388,8 @@ function Dashboard({ onLogout }) {
                       </div>
                     </div>
                     <div className="flex items-center gap-2">
-                      <span className="text-2xl">🪙</span>
-                      <span className="text-xl font-bold">Win 10</span>
+                      <span className="text-2xl">⭐</span>
+                      <span className="text-xl font-bold">Win 10 pts</span>
                     </div>
                   </div>
                   <button className="bg-blue-500 text-white px-6 py-2 rounded-lg font-semibold hover:bg-blue-600 transition">
